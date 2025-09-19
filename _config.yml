@@ -1,0 +1,38 @@
+title: WTF Quiz - 1C
+description: Викторина по разработке в 1С
+baseurl: ""
+url: "https://SeiOkami.github.io/WTF-Quiz-OneS"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Collections
+collections:
+  questions:
+    output: false  # Не генерируем отдельные страницы для вопросов
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - package-lock.json
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README*.md
+  - CONTRIBUTING.md
+  - TECHNICAL.md
+  - CHANGELOG.md
+
+# Defaults
+# Убираем layout для вопросов, так как они не должны генерировать отдельные страницы

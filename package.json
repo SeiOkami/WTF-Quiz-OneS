@@ -1,0 +1,38 @@
+{
+  "name": "wtf-quiz-1c",
+  "version": "2.1.0",
+  "description": "🤯 WTF Quiz - Интерактивная викторина по 1С с неожиданными вопросами",
+  "main": "index.html",
+  "scripts": {
+    "start": "bundle exec jekyll serve",
+    "build": "bundle exec jekyll build",
+    "serve": "bundle exec jekyll serve --livereload",
+    "clean": "bundle exec jekyll clean",
+    "doctor": "bundle exec jekyll doctor"
+  },
+  "keywords": [
+    "1c",
+    "quiz",
+    "jekyll",
+    "javascript",
+    "css",
+    "education"
+  ],
+  "author": "SeiOkami",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SeiOkami/WTF-Quiz-OneS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SeiOkami/WTF-Quiz-OneS/issues"
+  },
+  "homepage": "https://SeiOkami.github.io/WTF-Quiz-OneS",
+  "engines": {
+    "node": ">=14.0.0",
+    "ruby": ">=2.7.0"
+  },
+  "dependencies": {
+    "marked": "^16.2.1"
+  }
+}

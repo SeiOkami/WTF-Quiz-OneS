@@ -1,0 +1,564 @@
+/* Filter Manager Styles */
+.filter-manager {
+    background: var(--surface-color);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.filter-manager.collapsed {
+    padding-bottom: 20px;
+}
+
+.filter-manager.collapsed .filter-sections {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-bottom: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-bottom 0.3s ease;
+}
+
+.filter-manager.collapsed .filter-summary {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    margin-top: 0;
+    padding-top: 0;
+    transition: max-height 0.3s ease, opacity 0.3s ease, margin-top 0.3s ease, padding-top 0.3s ease;
+}
+
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.filter-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-badge {
+    background: var(--primary-color);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 6px;
+    border-radius: 10px;
+    min-width: 18px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.filter-manager.collapsed .filter-badge {
+    display: inline-block !important;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-sections {
+    display: grid;
+    gap: 20px;
+}
+
+.filter-section {
+    background: var(--background-color);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.filter-section h4 {
+    margin: 0 0 8px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-description {
+    margin: 0 0 15px 0;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 0.875rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.tag-filter-btn:hover {
+    background: var(--surface-color);
+    border-color: var(--primary-color);
+}
+
+.tag-filter-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+.tag-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.tag-name {
+    font-weight: 500;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.tag-count {
+    background: rgba(0, 0, 0, 0.1);
+    color: inherit;
+    padding: 2px 6px;
+    border-radius: 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    min-width: 20px;
+    text-align: center;
+}
+
+.tag-filter-btn.active .tag-count {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.filter-summary {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+.filter-summary h4 {
+    margin: 0 0 10px 0;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.filter-group {
+    margin-bottom: 10px;
+}
+
+.filter-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 5px;
+}
+
+.filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.filter-tag {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: white;
+}
+
+.filter-tag.include {
+    background: var(--success-color);
+}
+
+.filter-tag.exclude {
+    background: var(--error-color);
+}
+
+/* Current Filters Display */
+.current-filters {
+    background: linear-gradient(135deg, var(--surface-color) 0%, rgba(37, 99, 235, 0.05) 100%);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(37, 99, 235, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.current-filters::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--primary-color), var(--success-color), var(--error-color));
+}
+
+.current-filters-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.current-filters-header h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.current-filters-actions {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+#toggleFiltersPanel {
+    cursor: pointer;
+    pointer-events: auto;
+    z-index: 10;
+    position: relative;
+}
+
+.toggle-icon {
+    transition: transform 0.3s ease;
+}
+
+.current-filters.collapsed .toggle-icon {
+    transform: rotate(180deg);
+}
+
+.toggle-icon-main {
+    transition: transform 0.3s ease;
+}
+
+.filter-manager.collapsed .toggle-icon-main {
+    transform: rotate(180deg);
+}
+
+.current-filters-content {
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+    max-height: 1000px;
+    opacity: 1;
+    overflow: hidden;
+}
+
+.current-filters.collapsed .current-filters-content {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+
+
+.current-filter-group {
+    margin-bottom: 8px;
+}
+
+.current-filter-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+}
+
+.current-filter-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.current-filter-tag {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.current-filter-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.current-filter-tag.include {
+    background: linear-gradient(135deg, var(--success-color), #059669);
+}
+
+.current-filter-tag.exclude {
+    background: linear-gradient(135deg, var(--error-color), #dc2626);
+}
+
+.current-filter-tag::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* Compact Tag Chips */
+.tags-container.compact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag-chip {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    background: var(--background-color);
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+
+.tag-chip:hover {
+    background: var(--surface-color);
+    border-color: var(--primary-color);
+}
+
+.tag-chip.state-include {
+    border-color: var(--success-color);
+    box-shadow: 0 0 0 2px rgba(16,185,129,0.15);
+}
+
+.tag-chip.state-exclude {
+    border-color: var(--error-color);
+    box-shadow: 0 0 0 2px rgba(239,68,68,0.15);
+}
+
+.tag-chip .tag-actions {
+    display: none;
+    gap: 4px;
+}
+
+.tag-chip:hover .tag-actions {
+    display: inline-flex;
+}
+
+.tag-action {
+    width: 20px;
+    height: 20px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: var(--background-color);
+    color: var(--text-primary);
+    font-weight: 700;
+    padding: 0;
+}
+
+.tag-action.include {
+    border-color: var(--success-color);
+    color: var(--success-color);
+}
+
+.tag-action.exclude {
+    border-color: var(--error-color);
+    color: var(--error-color);
+}
+
+.tag-action:active {
+    transform: scale(0.96);
+}
+
+/* Chip long-press menu */
+.chip-menu {
+    position: absolute;
+    z-index: 1100;
+    background: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    padding: 8px;
+    display: flex;
+    gap: 6px;
+}
+
+/* Modal Styles */
+.filter-modal {
+    width: 600px;
+    max-width: 90vw;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .filter-manager {
+        padding: 15px;
+    }
+    
+    .filter-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .filter-controls {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .filter-sections {
+        gap: 15px;
+    }
+    
+    .tags-container {
+        gap: 6px;
+    }
+    
+    .tag-filter-btn {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .current-filters {
+        padding: 15px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+    }
+    
+    .current-filters-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .current-filters-header h4 {
+        font-size: 1rem;
+    }
+    
+    .current-filters-actions {
+        width: 100%;
+        justify-content: space-between;
+    }
+    
+    .current-filter-tag {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+
+    
+    .current-filters {
+        margin-bottom: 10px;
+    }
+    
+    .filter-modal {
+        width: 100%;
+    }
+    
+    .modal-actions {
+        flex-direction: column;
+    }
+    
+    .modal-actions .btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tag-filter-btn {
+        padding: 4px 8px;
+        font-size: 0.75rem;
+    }
+    
+    .tag-name {
+        font-size: 0.75rem;
+    }
+    
+    .tag-filter-btn {
+        min-width: 40px;
+        justify-content: center;
+    }
+    
+    .filter-tags,
+    .current-filter-tags {
+        gap: 4px;
+    }
+    
+    .filter-tag,
+    .current-filter-tag {
+        padding: 2px 4px;
+        font-size: 0.7rem;
+    }
+    
+    .tag-chip {
+        padding: 5px 8px;
+    }
+    
+    .tag-name {
+        font-size: 0.85rem;
+        display: inline-block;
+    }
+    
+    .tag-dot {
+        width: 6px;
+        height: 6px;
+    }
+}

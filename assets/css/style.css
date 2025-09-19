@@ -1,0 +1,120 @@
+/* Main CSS file - imports all modules */
+
+/* Import base styles */
+@import url('./base.css');
+
+/* Import layout styles */
+@import url('./layout.css');
+
+/* Import quiz styles */
+@import url('./quiz.css');
+
+/* Import quizzes list styles */
+@import url('./quizzes.css');
+
+/* Import filter styles */
+@import url('./filters.css');
+
+/* Import tag styles */
+@import url('./tags.css');
+
+/* Additional responsive styles for very small screens */
+@media (max-width: 360px) {
+    .container {
+        padding: 0 0.125rem;
+    }
+    
+    .quiz-container {
+        padding: 0 0.125rem;
+    }
+    
+    .hero-logo img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .hero-title {
+        font-size: 1.25rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.8rem;
+    }
+    
+    .hero-description {
+        font-size: 0.75rem;
+    }
+    
+    .quiz-title {
+        font-size: 1.125rem;
+    }
+    
+    .question-text {
+        font-size: 0.85rem;
+    }
+    
+    .option {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+    }
+    
+    .stat-item {
+        padding: 0.3rem;
+        min-width: 60px;
+    }
+    
+    .stat-label {
+        font-size: 0.6rem;
+    }
+    
+    .stat-value {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.8rem;
+    }
+    
+    .question-images {
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .question-image {
+        border-radius: calc(var(--border-radius) * 0.5);
+    }
+    
+    /* Ensure images don't overflow on very small screens */
+    .question-image {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* Landscape orientation for mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        padding: 1rem 0;
+    }
+    
+    .hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .quiz-header {
+        margin-bottom: 1rem;
+    }
+    
+    .quiz-title {
+    font-size: 1.25rem;
+    }
+    
+    .question-container {
+        min-height: 180px;
+    }
+    
+    .stats-preview {
+        padding: 1rem;
+    }
+}

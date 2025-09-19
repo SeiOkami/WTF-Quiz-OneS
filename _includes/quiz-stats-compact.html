@@ -1,0 +1,22 @@
+<!-- Компактная статистика викторины -->
+<div class="quiz-stats-compact">
+    <div class="stats-row">
+        <div class="stat-item-compact">
+            <span class="stat-value" id="correct-answers">0</span>
+            <span class="stat-label">{% if include.style == 'battle' %}победы{% else %}верно{% endif %}</span>
+        </div>
+        <div class="stat-item-compact">
+            <span class="stat-value" id="total-answers">0</span>
+            <span class="stat-label">{% if include.style == 'battle' %}битв{% else %}всего{% endif %}</span>
+        </div>
+        <div class="stat-item-compact">
+            <span class="stat-value" id="accuracy">0%</span>
+            <span class="stat-label">{% if include.style == 'battle' %}сила{% else %}точность{% endif %}</span>
+        </div>
+    </div>
+    {% unless include.hide_reset %}
+    <button id="reset-stats" class="btn-reset-compact" title="Сбросить статистику">
+        🧹
+    </button>
+    {% endunless %}
+</div>

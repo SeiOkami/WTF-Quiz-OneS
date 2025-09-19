@@ -1,0 +1,22 @@
+<div class="stats-preview">
+    <h2>Твои достижения</h2>
+    <div class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-number" id="total-questions-preview">0</div>
+            <div class="stat-label">Вопросов пройдено</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="correct-answers-preview">0</div>
+            <div class="stat-label">Правильных ответов</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-number" id="accuracy-preview">0%</div>
+            <div class="stat-label">Точность</div>
+        </div>
+    </div>
+    
+    <div class="stats-actions">
+        <button id="reset-stats" class="btn btn-outline">Сбросить прогресс</button>
+        <a href="{{ '/quiz' | relative_url }}" class="btn btn-primary">Продолжить игру</a>
+    </div>
+</div>

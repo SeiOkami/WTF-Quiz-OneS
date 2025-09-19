@@ -1,0 +1,37 @@
+<div class="filter-manager" id="filterManager">
+    <div class="filter-header">
+        <h3>🔍 Фильтры и поиск <span class="filter-badge" id="filterBadge" style="display: none;">0</span></h3>
+        <div class="filter-controls">
+            <button class="btn btn-sm btn-secondary" id="clearFilters" title="Очистить все фильтры">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 6h18"></path>
+                    <path d="M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6"></path>
+                    <path d="M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"></path>
+                </svg>
+                Очистить
+            </button>
+            <button class="btn btn-sm btn-outline" id="toggleFiltersContainer" title="Свернуть/развернуть панель фильтров">
+                <svg class="toggle-icon-main" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 15l-6-6-6 6"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="filter-sections">
+        <div class="filter-section">
+            <h4>🏷️ Категории вопросов</h4>
+            <p class="filter-description">Нажмите на тег, чтобы переключать: ничего → включить → исключить.</p>
+            <div class="tags-container compact" id="tagsList">
+                <!-- Теги будут добавлены динамически -->
+            </div>
+        </div>
+    </div>
+
+    <div class="filter-summary" id="filterSummary" style="display: none;">
+        <h4>✅ Активные фильтры:</h4>
+        <div class="active-filters" id="activeFilters">
+            <!-- Активные фильтры будут показаны здесь -->
+        </div>
+    </div>
+</div>

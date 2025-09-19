@@ -1,0 +1,25 @@
+<!-- Quiz data for statistics -->
+<script>
+    // Загружаем данные вопросов для статистики
+    window.quizData = {
+        questions: [
+            {% for question in site.questions %}
+            {% if question.options and question.correct != nil %}
+            {
+                guid: {{ question.guid | jsonify }},
+                date: {{ question.date | jsonify }},
+                question: {{ question.question | jsonify }},
+                explanation: {{ question.explanation | jsonify }},
+                title: {{ question.title |jsonify }},
+                content: {{ question.content | jsonify }},
+                options: {{ question.options | jsonify }},
+                correct: {{ question.correct }},
+                tags: {{ question.tags | default: '[]' | jsonify }},
+                images: {{ question.images | default: '[]' | jsonify }},
+                source: {{ question.source | default: '""' | jsonify }}
+            }{% unless forloop.last %},{% endunless %}
+            {% endif %}
+            {% endfor %}
+        ]
+    };
+</script>

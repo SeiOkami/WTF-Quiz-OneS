@@ -1,0 +1,98 @@
+# Теги для вопросов викторины
+# Каждый тег имеет название, цвет и описание
+
+outdated:
+  name: "Устаревшее"
+  color: "#ef4444"
+  description: "Уже не актуальные для современной платформы"
+
+wtf:
+  name: "WTF"
+  color: "#A73853"
+  description: "Погружения в недра платформы"
+
+forms:
+  name: "Формы"
+  color: "#F0D698"
+  description: "Нюансы поведения управляемых форм"
+
+standarts:
+  name: "Стандарты"
+  color: "#BAACC7"
+  description: "Стандарты разработки в 1С"
+
+syntax:
+  name: "Синтаксис"
+  color: "#90845B"
+  description: "Синтаксис 1С"
+
+platform:
+  name: "Платформа"
+  color: "#293133"
+  description: "Нюансы работы объектов и методов платформы"
+
+strings:
+  name: "Работа со строками"
+  color: "#735184"
+  description: "Нюансы работы со строками"
+
+dates:
+  name: "Работа с датами"
+  color: "#641C34"
+  description: "Нюансы работы с датами"
+
+skd:
+  name: "СКД"
+  color: "#10b981"
+  description: "Нюансы работы с СКД"
+
+compiler:
+  name: "Компилятор"
+  color: "#D5713F"
+  description: "Нюансы компиляции"
+  
+math:
+  name: "Математика"
+  color: "#434B1B"
+  description: "Математические операции"
+
+cast:
+  name: "Приведение типов"
+  color: "#CAC4B0"
+  description: "Нюансы приведения типов"
+
+optimization:
+  name: "Оптимизация"
+  color: "#CED23A"
+  description: "Нюансы оптимизации"
+
+multilingual:
+  name: "Мультиязычность"
+  color: "#7BA05B"
+  description: "Работа с мультиязычностью"
+
+queries:
+  name: "Запросы"
+  color: "#423189"
+  description: "Запросы в 1С"
+
+client_server:
+  name: "Клиент-сервер"
+  color: "#6E5160"
+  description: "Клиент-серверная архитектура 1С"
+
+async:
+  name: "Асинх"
+  color: "#AA98A9"
+  description: "Асинхронность в 1С"
+
+perems:
+  name: "Ссылки в памяти"
+  color: "#007CAD"
+  description: "Нюансы работы переменных, их значений и ссылок в памяти"
+
+extensions:
+  name: "Расширения"
+  color: "#AD655F"
+  description: "Нюансы работы расширений"
+

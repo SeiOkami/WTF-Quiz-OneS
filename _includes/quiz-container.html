@@ -1,0 +1,16 @@
+<div class="quiz-container">
+    <div class="quiz-header">
+        {% include current-filters.html %}
+    </div>
+
+    {% include quiz-common.html %}
+    
+    <div class="quiz-controls">
+        <button id="next-question" class="btn btn-primary" style="display: none;">
+            ⚡ Следующий
+        </button>
+    </div>
+
+    {% include quiz-stats.html %}
+
+</div>
