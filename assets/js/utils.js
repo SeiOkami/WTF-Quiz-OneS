@@ -15,7 +15,14 @@ export class Utils {
 
     static markdownToHtml(markdown) {
         if (!markdown) return '';
-        return marked.parse(markdown);
+        
+        // Заменяем пути к изображениям с учётом baseurl
+        let processedMarkdown = markdown;
+        if (window.baseUrl) {
+            processedMarkdown = markdown.replace(/!\[([^\]]*)\]\(\/assets\//g, `![$1](${window.baseUrl}/assets/`);
+        }
+        
+        return marked.parse(processedMarkdown);
     }
 
     static formatDate(date) {
@@ -113,7 +120,7 @@ export class Utils {
                     </svg>
                     <h3>Ошибка</h3>
                     <p>${message}</p>
-                    <a href="/quizzes" class="btn btn-primary">Вернуться к списку</a>
+                    <a href="${window.baseUrl || ''}/quizzes" class="btn btn-primary">Вернуться к списку</a>
                 </div>
             `;
         }

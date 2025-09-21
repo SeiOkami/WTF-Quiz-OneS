@@ -1,5 +1,8 @@
 <!-- Quiz data for statistics -->
 <script>
+    // Базовый URL для правильной работы путей
+    window.baseUrl = {{ site.baseurl | jsonify }};
+    
     // Загружаем данные вопросов для статистики
     window.quizData = {
         questions: [
@@ -15,7 +18,7 @@
                 options: {{ question.options | jsonify }},
                 correct: {{ question.correct }},
                 tags: {{ question.tags | default: '[]' | jsonify }},
-                images: {{ question.images | default: '[]' | jsonify }},
+                images: [{% for image in question.images %}{{ image | relative_url | jsonify }}{% unless forloop.last %},{% endunless %}{% endfor %}],
                 source: {{ question.source | default: '""' | jsonify }}
             }{% unless forloop.last %},{% endunless %}
             {% endif %}

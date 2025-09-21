@@ -135,7 +135,8 @@ export class QuizApp {
     setupCurrentQuizShareLink(questionGuid) {
         const shareLink = document.getElementById('share-current-quiz');
         if (shareLink && questionGuid) {
-            const quizUrl = `/quiz-single/?question=${questionGuid}`;
+            const baseUrl = window.baseUrl || '';
+            const quizUrl = `${baseUrl}/quiz-single/?question=${questionGuid}`;
             shareLink.href = quizUrl;
             shareLink.target = '_blank';
             shareLink.rel = 'noopener noreferrer';
@@ -269,7 +270,8 @@ export class QuizApp {
         if (changeBtn) {
             changeBtn.onclick = () => {
                 const params = window.filterManager ? window.filterManager.getFilterParams() : '';
-                const url = params ? `/quizzes/?${params}` : '/quizzes/';
+                const baseUrl = window.baseUrl || '';
+                const url = params ? `${baseUrl}/quizzes/?${params}` : `${baseUrl}/quizzes/`;
                 window.location.href = url;
             };
         }
