@@ -1,3 +1,5 @@
+<img src="https://seiokami.github.io/WTF-Quiz-OneS/assets/images/logo.png" width="500" height="500" />
+
 # 🤯 WTF Quiz - 1C
 
 Коллекция викторин от Жёлтого Чайника 1С  
@@ -79,5 +81,6 @@ source: "ссылка на источник"
 # По всем вопросам
 Обращайтесь к автору:  
 https://github.com/SeiOkami
+
 
 Make IT, Not War
